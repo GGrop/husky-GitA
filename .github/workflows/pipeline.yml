@@ -1,0 +1,19 @@
+name: Deployment Pipeline
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  deply:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: isntall depedencies
+        run: npm install
