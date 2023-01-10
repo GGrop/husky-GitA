@@ -17,3 +17,5 @@ jobs:
           node-version: 16
       - name: isntall depedencies
         run: npm install
+      - name: Lint
+        run: npm run eslint
